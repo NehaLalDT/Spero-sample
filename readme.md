@@ -2,12 +2,11 @@
 
 This repository contains a **HIPAA-aligned React frontend** for a clinical patient management system. The application is designed to comply with the **HIPAA Security Rule technical safeguards** when deployed with a properly configured backend and infrastructure.
 
-> ⚠️ **Important**  
-> HIPAA compliance is **system-wide**. This frontend implements required client-side protections but **must be paired with a HIPAA-compliant backend, hosting environment, and legal agreements**.
+HIPAA compliance is **system-wide**. This frontend implements required client-side protections but **must be paired with a HIPAA-compliant backend, hosting environment, and legal agreements**.
 
----
 
-## 🔐 HIPAA Compliance Scope
+
+## HIPAA Compliance Scope
 
 This application follows HIPAA best practices for:
 
@@ -19,9 +18,9 @@ This application follows HIPAA best practices for:
 
 The frontend **does not store or persist PHI** and relies on secure server-side enforcement.
 
----
 
-## ✅ Implemented HIPAA Safeguards
+
+## Implemented HIPAA Safeguards
 
 ### 1. Access Control
 - No user identifiers stored in `localStorage` or `sessionStorage`
@@ -50,8 +49,6 @@ The frontend **does not store or persist PHI** and relies on secure server-side 
   - Patient ID
   - Timestamp
   - Action performed
-
----
 
 
 
