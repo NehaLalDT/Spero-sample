@@ -53,33 +53,12 @@ The frontend **does not store or persist PHI** and relies on secure server-side 
 
 ---
 
-## 🧱 Architecture Overview
 
-```
-React Frontend
-   |
-   |  HTTPS (POST only)
-   |
-HIPAA-Compliant API
-   |
-Encrypted Database
-```
 
 The frontend is treated as an **untrusted client**. All authorization and filtering are enforced server-side.
 
----
 
-## 📁 Key Files
-
-| File | Description |
-|------|------------|
-| `PatientsPage.js` | HIPAA-aligned patient list view |
-| `PatientDetailsPage.js` | Protected PHI view |
-| `api/` | Backend services (external) |
-
----
-
-## 📄 Required API Contract
+##  Required API Contract
 
 ### List Assigned Patients
 
@@ -108,22 +87,7 @@ POST /api/patients/list
 }
 ```
 
-> ❗ Backend **must not return PHI** for list views.
-
----
-
-## 🔧 Required Backend & Infrastructure Controls
-
-This frontend assumes the following are in place:
-
-- HIPAA-compliant authentication provider
-- Business Associate Agreement (BAA)
-- Encrypted database and backups
-- TLS encryption
-- Role-Based Access Control (RBAC)
-- Immutable audit logs
-- Automatic session expiration
-- Incident response plan
+ Backend **must not return PHI** for list views.
 
 ---
 
@@ -135,13 +99,6 @@ This frontend assumes the following are in place:
 - Expose PHI in URLs
 - Cache sensitive data
 
----
-
-## ⚠️ Legal Disclaimer
-
-This software is provided as a **technical implementation example**. HIPAA compliance depends on organizational, legal, and operational controls in addition to software.
-
-Consult legal and compliance professionals before production use.
 
 ---
 
